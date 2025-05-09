@@ -4,35 +4,68 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1453a9c1-bdfe-4127-8f32-3f8dc36e4046" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/microsoft_sqlserver_mssql_jdbc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/springframework_boot_spring_starter_data_jpa.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NetBomba.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/ConsoleRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/NetBombaApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/controller/AssinaturaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/controller/ClienteController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/controller/PlanoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/dto/AssinaturaDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/dto/ClienteDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/dto/PlanoDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/model/Assinatura.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/model/Cliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/model/Endereco.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/model/Plano.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/repository/AssinaturaRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/repository/ClienteRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/repository/PlanoRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/service/AssinaturaService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/service/ClienteService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/service/PlanoService.java" afterDir="false" />
+    <list default="true" id="1453a9c1-bdfe-4127-8f32-3f8dc36e4046" name="Changes" comment="Reestruturação sem spring boot usando apenas Hibernate puro e nos padrões comerciais">
+      <change afterPath="$PROJECT_DIR$/src/main/controller/assinatura/AssinaturaEditarController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/controller/assinatura/AssinaturaExcluirController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/controller/assinatura/AssinaturaNovoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/controller/assinatura/AssinaturaTabelaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/controller/cliente/ClienteBuscaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/controller/cliente/ClienteEditarController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/controller/cliente/ClienteExcluirController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/controller/cliente/ClienteNovoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/controller/cliente/ClienteTabelaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/controller/plano/PlanoEditarController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/controller/plano/PlanoExcluirController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/controller/plano/PlanoNovoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/controller/plano/PlanoTabelaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/model/dao/AssinaturaDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/model/dao/ClienteDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/model/dao/EnderecoDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/model/dao/PlanoDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/model/entity/Assinatura.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/model/entity/Cliente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/model/entity/Endereco.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/model/entity/Plano.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/model/service/AssinaturaService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/model/service/ClienteService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/model/service/EnderecoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/model/service/PlanoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/view/assinatura/assinatura_editar.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/view/assinatura/assinatura_excluir.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/view/assinatura/assinatura_novo.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/view/assinatura/assinatura_tabela.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/view/cliente/cliente_busca.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/view/cliente/cliente_editar.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/view/cliente/cliente_excluir.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/view/cliente/cliente_novo.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/view/cliente/cliente_tabela.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/view/plano/plano_editar.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/view/plano/plano_excluir.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/view/plano/plano_novo.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/view/plano/plano_tabela.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/springframework_boot_spring_starter_data_jpa.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NetBomba.iml" beforeDir="false" afterPath="$PROJECT_DIR$/NetBomba.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ConsoleRunner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/NetBombaApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/controller/AssinaturaController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/controller/ClienteController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/controller/PlanoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/dto/AssinaturaDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/dto/ClienteDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/dto/PlanoDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/model/Assinatura.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/model/Cliente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/model/Endereco.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/model/Plano.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/repository/AssinaturaRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/repository/ClienteRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/repository/PlanoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/service/AssinaturaService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/service/ClienteService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/service/PlanoService.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +84,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;marcosfantonio&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/marcosfantonio/NetBombaProvedor.git&quot;,
+    &quot;accountId&quot;: &quot;658379d9-098f-4000-b047-2d345181d676&quot;
+  }
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/java/netbomba/ConsoleRunner.java" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -63,34 +108,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "true",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.NetBombaApplication.executor": "Run",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/Users/marco/Documents/NetBomba/src/Main.java",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.NetBombaApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/marco/Documents/NetBomba/src/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="main" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="NetBombaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="NetBomba" />
@@ -128,10 +178,26 @@
       <updated>1746711400172</updated>
       <workItem from="1746711402565" duration="1770000" />
       <workItem from="1746713944478" duration="8354000" />
+      <workItem from="1746722925196" duration="557000" />
+      <workItem from="1746799475728" duration="3916000" />
     </task>
+    <task id="LOCAL-00001" summary="Banco de dados nao conecta">
+      <option name="closed" value="true" />
+      <created>1746723008685</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1746723008685</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Banco de dados nao conecta" />
+    <MESSAGE value="Reestruturação sem spring boot usando apenas Hibernate puro e nos padrões comerciais" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reestruturação sem spring boot usando apenas Hibernate puro e nos padrões comerciais" />
   </component>
 </project>
