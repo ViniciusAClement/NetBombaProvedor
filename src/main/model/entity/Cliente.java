@@ -110,4 +110,11 @@ public class Cliente {
 	public void setAssinatura(Assinatura assinatura) {
 		this.assinatura = assinatura;
 	}
+
+	@Override
+	public String toString() {
+		return "Cliente [id=" + id + ", nome=" + nome + ", cpf=" + cpf + ", endereco=" + endereco + ", assinatura="
+				+ assinatura + "]";
+	}
+	
 }

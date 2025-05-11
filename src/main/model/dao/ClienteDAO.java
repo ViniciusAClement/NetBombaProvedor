@@ -1,8 +1,15 @@
 package main.model.dao;
 
-import org.hibernate.Session;
+import java.util.ArrayList;
+import java.util.List;
 
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import main.model.entity.Assinatura;
 import main.model.entity.Cliente;
+import main.model.entity.Endereco;
+import main.model.service.PlanoService;
 
 public class ClienteDAO {
 	public static void addCliente ( Cliente cliente ) {
@@ -11,5 +18,47 @@ public class ClienteDAO {
 		session.save(cliente);
 		session.getTransaction().commit();
 		session.close();
+	}
+	public static Cliente getCliente ( int id ) {
+		Session session = HibernateUtil.getSessionFactory().openSession();
+		Cliente cliente = session.get(Cliente.class, id);
+		session.close();
+		return cliente;
+	}
+	
+	public static void updateCliente ( int id, String nome, String cpf, String rua, int numero, int plano_id) {
+		Session session = HibernateUtil.getSessionFactory().openSession();
+		Transaction transation = session.beginTransaction();
+		Cliente cliente = session.get(Cliente.class, id);
+		cliente.setNome(nome);
+		cliente.setCpf(cpf);
+		cliente.getEndereco().setRua(rua);
+		cliente.getEndereco().setNumero(numero);
+		cliente.getAssinatura().setPlano(PlanoService.readPlanoById(plano_id));
+		session.update(cliente);
+		transation.commit();
+		session.close();
+	}
+	
+	public static void deleteCliente( int id) {
+		Session session = HibernateUtil.getSessionFactory().openSession();
+		Transaction transaction = session.beginTransaction();
+		Cliente cliente = session.get(Cliente.class, id);
+		session.delete(cliente);
+		transaction.commit();
+		session.close();
+	}
+	
+	public static List<Cliente> readClienteTable(){
+		Session session = HibernateUtil.getSessionFactory().openSession();
+		List<Cliente> tabelaCliente = null;
+		
+		try {
+			tabelaCliente = session.createQuery("From Cliente", Cliente.class).list();
+		} finally {
+			session.close();
+		}
+		
+		return tabelaCliente;
 	}
 }
