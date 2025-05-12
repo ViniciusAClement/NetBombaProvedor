@@ -19,6 +19,7 @@ public class ClienteDAO {
 		session.getTransaction().commit();
 		session.close();
 	}
+	
 	public static Cliente getCliente ( int id ) {
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		Cliente cliente = session.get(Cliente.class, id);
@@ -60,5 +61,25 @@ public class ClienteDAO {
 		}
 		
 		return tabelaCliente;
+	}
+	
+	public static void cancelarInternet( int id ) {
+		Session session = HibernateUtil.getSessionFactory().openSession();
+		Cliente cliente = session.get(Cliente.class, id);
+		Transaction transation = session.beginTransaction();
+		cliente.getAssinatura().setStatus(false);
+		session.update(cliente);
+		transation.commit();
+		session.close();
+	}
+	
+	public static void ativarInternet( int id ) {
+		Session session = HibernateUtil.getSessionFactory().openSession();
+		Cliente cliente = session.get(Cliente.class, id);
+		Transaction transation = session.beginTransaction();
+		cliente.getAssinatura().setStatus(true);
+		session.update(cliente);
+		transation.commit();
+		session.close();
 	}
 }

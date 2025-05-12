@@ -39,4 +39,22 @@ public class ClienteService {
 	public static List<Cliente> readClienteTable () {
 		return ClienteDAO.readClienteTable();
 	}
+	
+	public static void cancelarInternet ( int id) {
+		if (ClienteService.readClienteById(id).getAssinatura().isStatus()) {
+			ClienteDAO.cancelarInternet(id);
+		}
+		else {
+			return;
+		}
+	}
+	
+	public static void ativarInternet ( int id) {
+		if (!ClienteService.readClienteById(id).getAssinatura().isStatus()) {
+			ClienteDAO.ativarInternet(id);
+		}
+		else {
+			return;
+		}
+	}
 }
